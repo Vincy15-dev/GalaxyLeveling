@@ -1,0 +1,144 @@
+# IL SISTEMA - Configuration File
+# GalaxyLeveling Plugin
+
+# Maximum player level
+max-level: 100
+
+# XP required for each level: base + linear*level + quadratic*level^2
+xp-formula:
+  base: 50
+  linear: 25
+  quadratic: 5
+
+# XP source multipliers (global)
+xp-sources:
+  mob-kills:
+    enabled: true
+    multiplier: 1.0
+    # Per-mob XP amounts
+    amounts:
+      ZOMBIE: 10
+      SKELETON: 10
+      CREEPER: 15
+      SPIDER: 8
+      ENDERMAN: 20
+      WITCH: 15
+      PHANTOM: 12
+      BLAZE: 25
+      GHAST: 20
+      MAGMA_CUBE: 18
+      SLIME: 8
+      CAVE_SPIDER: 10
+      SILVERFISH: 5
+      STRAY: 12
+      HUSK: 10
+      DROWNED: 10
+      VINDICATOR: 20
+      EVOKER: 30
+      VEX: 8
+      RAVAGER: 25
+      PIGLIN: 12
+      PIGLIN_BRUTE: 20
+      HOGLIN: 15
+      ZOGLIN: 15
+      WITHER_SKELETON: 25
+      SHULKER: 30
+      GUARDIAN: 15
+      ELDER_GUARDIAN: 40
+      DRAGON: 500
+      WITHER: 300
+    # If false, spawner-spawned mobs give no XP
+    allow-spawner-mobs: false
+  block-break:
+    enabled: true
+    multiplier: 1.0
+    # Only these blocks give XP when broken in survival
+    amounts:
+      DIAMOND_ORE: 25
+      EMERALD_ORE: 20
+      GOLD_ORE: 15
+      IRON_ORE: 10
+      COPPER_ORE: 8
+      COAL_ORE: 5
+      LAPIS_ORE: 12
+      REDSTONE_ORE: 8
+      NETHER_GOLD_ORE: 10
+      NETHER_QUARTZ_ORE: 8
+      ANCIENT_DEBRIS: 50
+      DEEPSLATE_DIAMOND_ORE: 30
+      DEEPSLATE_EMERALD_ORE: 25
+      DEEPSLATE_GOLD_ORE: 18
+      DEEPSLATE_IRON_ORE: 12
+      DEEPSLATE_COPPER_ORE: 10
+      DEEPSLATE_COAL_ORE: 6
+      DEEPSLATE_LAPIS_ORE: 15
+      DEEPSLATE_REDSTONE_ORE: 10
+    # Must be survival mode
+    require-survival: true
+  fishing:
+    enabled: true
+    multiplier: 1.0
+    # XP based on catch category
+    fish: 8
+    treasure: 25
+    junk: 3
+  quest-completion:
+    enabled: true
+    multiplier: 1.0
+
+# Stat configuration
+stats:
+  max-points-per-stat: 100
+  points-per-level: 3
+  # Base effect per point (before class multiplier)
+  forza:
+    attack-damage: 0.5
+    attack-knockback: 0.02
+  agilita:
+    movement-speed: 0.002
+    safe-fall-distance: 0.5
+    attack-speed: 0.005
+  vitalita:
+    max-health: 1.0
+    regen-bonus: 0.001
+    effect-duration-reduction: 0.005
+  intelligenza:
+    xp-multiplier-per-point: 0.005
+    luck: 0.1
+    focus-regen-per-tick: 0.01
+  percezione:
+    crit-chance-per-point: 0.005
+    crit-multiplier-per-point: 0.01
+    knockback-resistance: 0.01
+    glowing-radius-while-sneaking: 0.5
+    fishing-treasure-bonus: 0.002
+
+# Rank soft-cap behavior
+rank:
+  # When true, players past a rank's level cap accumulate XP but don't level up until trial completed
+  enable-soft-cap: true
+
+# Leaderboard refresh interval in seconds
+leaderboard:
+  refresh-interval: 300
+  # How many top entries to cache
+  top-size: 10
+
+# Optional direct chat/tab integration (OFF by default)
+# WARNING: Keep this disabled if you use TAB, EssentialsX Chat, or any chat/tab manager
+# Enabling this alongside another chat/tab plugin will cause double-formatting
+direct-chat-tab-integration:
+  enabled: false
+  # Prepend rank prefix to chat messages
+  prepend-rank-to-chat: true
+  # Set player list name with rank color
+  set-player-list-name: true
+
+# BossBar XP display
+bossbar:
+  enabled: true
+  # Show by default (players can toggle)
+  default-visible: true
+
+# Messages language (Italian)
+messages-lang: it

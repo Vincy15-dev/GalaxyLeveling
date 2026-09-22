@@ -1,0 +1,384 @@
+# IL SISTEMA - Quest Configuration
+# Categories: DAILY, WEEKLY, STORY, TRIAL
+# Types: KILL_MOB, BREAK_BLOCK, PLACE_BLOCK, CRAFT_ITEM, FISH_ITEM, TAME_ANIMAL, BREED_ANIMAL, ENCHANT_ITEM, BREW_POTION, DEAL_DAMAGE, TRAVEL_DISTANCE, REACH_LEVEL
+
+quests:
+  # ==================== DAILY QUESTS (pool of 4+, rotates daily) ====================
+  - id: "daily_kill_zombies"
+    display-name: "Cacciatore di Non-Morti"
+    category: DAILY
+    type: KILL_MOB
+    target: ZOMBIE
+    amount: 15
+    icon: ZOMBIE_HEAD
+    min-level: 1
+    one-time: false
+    requires-class: null
+    rewards:
+      xp: 50
+      stat-points: 1
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+    allow-spawner-mobs: false
+
+  - id: "daily_mine_iron"
+    display-name: "Minatore di Ferro"
+    category: DAILY
+    type: BREAK_BLOCK
+    target: IRON_ORE
+    amount: 20
+    icon: IRON_INGOT
+    min-level: 1
+    one-time: false
+    requires-class: null
+    rewards:
+      xp: 40
+      stat-points: 1
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+    allow-placed-blocks: false
+
+  - id: "daily_fish_treasure"
+    display-name: "Pesca Fortunata"
+    category: DAILY
+    type: FISH_ITEM
+    target: TREASURE
+    amount: 3
+    icon: FISHING_ROD
+    min-level: 5
+    one-time: false
+    requires-class: null
+    rewards:
+      xp: 60
+      stat-points: 2
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+
+  - id: "daily_breed_animals"
+    display-name: "Allevatore"
+    category: DAILY
+    type: BREED_ANIMAL
+    target: ANY
+    amount: 10
+    icon: WHEAT
+    min-level: 1
+    one-time: false
+    requires-class: null
+    rewards:
+      xp: 35
+      stat-points: 1
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+
+  - id: "daily_travel_distance"
+    display-name: "Esploratore"
+    category: DAILY
+    type: TRAVEL_DISTANCE
+    target: ANY
+    amount: 5000
+    icon: LEATHER_BOOTS
+    min-level: 1
+    one-time: false
+    requires-class: null
+    rewards:
+      xp: 45
+      stat-points: 1
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+
+  # ==================== WEEKLY QUESTS (2+) ====================
+  - id: "weekly_kill_mixed"
+    display-name: "Caccia Diversificata"
+    category: WEEKLY
+    type: KILL_MOB
+    target: MIXED
+    amount: 100
+    icon: BOW
+    min-level: 10
+    one-time: false
+    requires-class: null
+    rewards:
+      xp: 200
+      stat-points: 3
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+    allow-spawner-mobs: false
+
+  - id: "weekly_enchant_items"
+    display-name: "Incantatore Esperto"
+    category: WEEKLY
+    type: ENCHANT_ITEM
+    target: ANY
+    amount: 5
+    icon: ENCHANTING_TABLE
+    min-level: 15
+    one-time: false
+    requires-class: null
+    rewards:
+      xp: 180
+      stat-points: 3
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+
+  # ==================== STORY QUESTS (3-quest chain) ====================
+  - id: "story_01_first_steps"
+    display-name: "I Primi Passi"
+    category: STORY
+    type: KILL_MOB
+    target: SKELETON
+    amount: 5
+    icon: BOOK
+    min-level: 1
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 100
+      stat-points: 2
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: null
+    allow-spawner-mobs: false
+
+  - id: "story_02_deeper_mines"
+    display-name: "Nelle Profondità"
+    category: STORY
+    type: BREAK_BLOCK
+    target: DIAMOND_ORE
+    amount: 3
+    icon: DIAMOND
+    min-level: 10
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 150
+      stat-points: 3
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: "story_01_first_steps"
+    allow-placed-blocks: false
+
+  - id: "story_03_master_craftsman"
+    display-name: "Maestro Artigiano"
+    category: STORY
+    type: CRAFT_ITEM
+    target: DIAMOND_SWORD
+    amount: 1
+    icon: DIAMOND_SWORD
+    min-level: 20
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 300
+      stat-points: 5
+      items: []
+      commands: []
+    requirements:
+      min-rank: null
+      prerequisite-quest-id: "story_02_deeper_mines"
+
+  # ==================== TRIAL QUESTS (one per rank transition) ====================
+  - id: "trial_rank_d"
+    display-name: "Prova dell'Apprendista"
+    category: TRIAL
+    type: KILL_MOB
+    target: SPIDER
+    amount: 20
+    icon: COBWEB
+    min-level: 16
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 250
+      stat-points: 5
+      items: []
+      commands: []
+    requirements:
+      min-rank: "e"
+      prerequisite-quest-id: null
+    allow-spawner-mobs: false
+
+  - id: "trial_rank_c"
+    display-name: "Prova del Veterano"
+    category: TRIAL
+    type: DEAL_DAMAGE
+    target: ANY
+    amount: 10000
+    icon: IRON_SWORD
+    min-level: 31
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 400
+      stat-points: 8
+      items: []
+      commands: []
+    requirements:
+      min-rank: "d"
+      prerequisite-quest-id: "trial_rank_d"
+
+  - id: "trial_rank_b"
+    display-name: "Prova del Maestro"
+    category: TRIAL
+    type: KILL_MOB
+    target: ENDERMAN
+    amount: 15
+    icon: ENDER_PEARL
+    min-level: 51
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 600
+      stat-points: 10
+      items: []
+      commands: []
+    requirements:
+      min-rank: "c"
+      prerequisite-quest-id: "trial_rank_c"
+    allow-spawner-mobs: false
+
+  - id: "trial_rank_a"
+    display-name: "Prova del Campione"
+    category: TRIAL
+    type: REACH_LEVEL
+    target: ANY
+    amount: 71
+    icon: NETHER_STAR
+    min-level: 71
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 800
+      stat-points: 12
+      items: []
+      commands: []
+    requirements:
+      min-rank: "b"
+      prerequisite-quest-id: "trial_rank_b"
+
+  - id: "trial_rank_s"
+    display-name: "Prova della Leggenda"
+    category: TRIAL
+    type: KILL_MOB
+    target: DRAGON
+    amount: 1
+    icon: DRAGON_HEAD
+    min-level: 91
+    one-time: true
+    requires-class: null
+    rewards:
+      xp: 2000
+      stat-points: 20
+      items: []
+      commands: []
+    requirements:
+      min-rank: "a"
+      prerequisite-quest-id: "trial_rank_a"
+    allow-spawner-mobs: false
+
+  # ==================== CLASS-EXCLUSIVE QUESTS ====================
+  - id: "class_guerriero_trial"
+    display-name: "La Via del Guerriero"
+    category: STORY
+    type: KILL_MOB
+    target: VINDICATOR
+    amount: 10
+    icon: DIAMOND_AXE
+    min-level: 35
+    one-time: true
+    requires-class: "guerriero"
+    rewards:
+      xp: 350
+      stat-points: 6
+      items: []
+      commands: []
+    requirements:
+      min-rank: "c"
+      prerequisite-quest-id: null
+    allow-spawner-mobs: false
+
+  - id: "class_spettro_hunt"
+    display-name: "Caccia nell'Ombra"
+    category: STORY
+    type: DEAL_DAMAGE
+    target: ANY
+    amount: 5000
+    icon: ARROW
+    min-level: 35
+    one-time: true
+    requires-class: "spettro"
+    rewards:
+      xp: 300
+      stat-points: 5
+      items: []
+      commands: []
+    requirements:
+      min-rank: "c"
+      prerequisite-quest-id: null
+
+  - id: "class_custode_defender"
+    display-name: "Il Difensore"
+    category: STORY
+    type: REACH_LEVEL
+    target: ANY
+    amount: 40
+    icon: TOTEM_OF_UNDYING
+    min-level: 40
+    one-time: true
+    requires-class: "custode"
+    rewards:
+      xp: 400
+      stat-points: 7
+      items: []
+      commands: []
+    requirements:
+      min-rank: "c"
+      prerequisite-quest-id: null
+
+  - id: "class_arcanista_study"
+    display-name: "Studi Arcani"
+    category: STORY
+    type: BREW_POTION
+    target: ANY
+    amount: 10
+    icon: BREWING_STAND
+    min-level: 35
+    one-time: true
+    requires-class: "arcanista"
+    rewards:
+      xp: 320
+      stat-points: 6
+      items: []
+      commands: []
+    requirements:
+      min-rank: "c"
+      prerequisite-quest-id: null
+
+# Daily reset hour (server time, 0-23)
+daily-reset-hour: 6
+# Weekly reset day (1=Monday, 7=Sunday)
+weekly-reset-day: 1
