@@ -53,4 +53,10 @@ public class PlayerProfile {
     public Map<StatDefinition, Integer> getStatValues() { return stats; }
     public int getStatValue(StatDefinition stat) { return stats.getOrDefault(stat, 0); }
     public void setStatValue(StatDefinition stat, int value) { stats.put(stat, value); }
+    
+    public void resetStats() {
+        for (StatDefinition stat : StatDefinition.values()) {
+            stats.put(stat, 0);
+        }
+    }
 }

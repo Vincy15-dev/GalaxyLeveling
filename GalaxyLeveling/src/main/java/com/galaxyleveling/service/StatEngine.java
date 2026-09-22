@@ -94,4 +94,12 @@ public class StatEngine implements Listener {
     public static StatEngine getInstance() {
         return instance;
     }
+    
+    public long getXpForLevel(int level) {
+        if (level <= 0) return 0;
+        int base = plugin.getConfig().getInt("system.xp.base-xp-for-level", 50);
+        int linear = plugin.getConfig().getInt("system.xp.linear-coefficient", 25);
+        int quadratic = plugin.getConfig().getInt("system.xp.quadratic-coefficient", 5);
+        return base + (linear * level) + (quadratic * level * level);
+    }
 }

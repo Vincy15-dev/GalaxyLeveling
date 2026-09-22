@@ -81,4 +81,8 @@ public class ClassManager {
         // Implementazione completa richiederebbe confronto ordinato dei rank
         return true; // Placeholder
     }
+    
+    public Map<String, PlayerClass> getAllClasses() {
+        return new HashMap<>(classes);
+    }
 }
