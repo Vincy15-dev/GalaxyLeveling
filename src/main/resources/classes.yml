@@ -1,0 +1,60 @@
+# IL SISTEMA - Class Specializations Configuration
+# Classes are permanent once chosen (no player-facing respec)
+# unlock-rank: the rank ID at which classes become available (default around level 25 = "c")
+
+unlock-rank: "c"
+
+classes:
+  - id: "guerriero"
+    display-name: "Guerriero"
+    icon: DIAMOND_SWORD
+    color-gradient: ["#FF6B6B", "#EE5A5A"]
+    description: "Un combattente corpo a corpo con forza devastante."
+    passive-flavor: "La tua lama colpisce più forte di qualsiasi altra."
+    stat-bonus:
+      forza: 0.15
+      agilita: 0.0
+      vitalita: 0.05
+      intelligenza: 0.0
+      percezione: 0.0
+
+  - id: "spettro"
+    display-name: "Spettro"
+    icon: ENDER_PEARL
+    color-gradient: ["#9D4EDD", "#7B2CBF"]
+    description: "Un assassino furtivo con percezione sovrumana."
+    passive-flavor: "Nessuno sfugge al tuo sguardo, nessuna preda è al sicuro."
+    stat-bonus:
+      forza: 0.0
+      agilita: 0.10
+      vitalita: 0.0
+      intelligenza: 0.0
+      percezione: 0.15
+
+  - id: "custode"
+    display-name: "Custode"
+    icon: SHIELD
+    color-gradient: ["#4ECDC4", "#44A08D"]
+    description: "Un tank indistruttibile con vitalità eccezionale."
+    passive-flavor: "Le ferite scorrono su di te come acqua sulle rocce."
+    stat-bonus:
+      forza: 0.05
+      agilita: 0.0
+      vitalita: 0.20
+      intelligenza: 0.0
+      percezione: 0.0
+
+  - id: "arcanista"
+    display-name: "Arcanista"
+    icon: BLAZE_ROD
+    color-gradient: ["#667EEA", "#764BA2"]
+    description: "Un mago potente con conoscenza arcana e focus rapido."
+    passive-flavor: "Il potere degli antichi fluisce attraverso le tue vene."
+    stat-bonus:
+      forza: 0.0
+      agilita: 0.0
+      vitalita: 0.0
+      intelligenza: 0.20
+      percezione: 0.05
+    # Special: faster focus regen (handled in FocusService)
+    focus-regen-multiplier: 1.5

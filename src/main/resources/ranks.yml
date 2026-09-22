@@ -1,0 +1,46 @@
+# IL SISTEMA - Rank Ladder Configuration
+# Ranks are ordered by position in this file (first = lowest)
+# Each rank has: id, display-name, color (hex), min-level, max-level (-1 for no cap), optional requires-trial quest ID
+
+ranks:
+  - id: "e"
+    display-name: "Novizio"
+    color: "#A0A0A0"
+    min-level: 1
+    max-level: 15
+    requires-trial: null
+
+  - id: "d"
+    display-name: "Apprendista"
+    color: "#00AA00"
+    min-level: 16
+    max-level: 30
+    requires-trial: "trial_rank_d"
+
+  - id: "c"
+    display-name: "Veterano"
+    color: "#00AAAA"
+    min-level: 31
+    max-level: 50
+    requires-trial: "trial_rank_c"
+
+  - id: "b"
+    display-name: "Maestro"
+    color: "#0000AA"
+    min-level: 51
+    max-level: 70
+    requires-trial: "trial_rank_b"
+
+  - id: "a"
+    display-name: "Campione"
+    color: "#AA00AA"
+    min-level: 71
+    max-level: 90
+    requires-trial: "trial_rank_a"
+
+  - id: "s"
+    display-name: "Leggenda"
+    color: "#FFAA00"
+    min-level: 91
+    max-level: -1
+    requires-trial: "trial_rank_s"

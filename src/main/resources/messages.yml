@@ -1,0 +1,104 @@
+# IL SISTEMA - Messages (Italian)
+# Supports hex colors with #RRGGBB format and gradients via ChatColor.of()
+
+prefix: "&#00AAFF[IL SISTEMA] "
+
+# General messages
+general:
+  no-permission: "&cNon hai il permesso per eseguire questo comando."
+  player-not-found: "&cGiocatore non trovato."
+  console-only: "&cQuesto comando può essere eseguito solo dalla console."
+  reload-success: "&aConfigurazione ricaricata con successo!"
+  data-loading: "&eCaricamento dati in corso, riprova tra poco..."
+  data-not-loaded: "&cI tuoi dati non sono ancora stati caricati. Attendi..."
+
+# Level & XP messages
+level:
+  level-up: "&6&l*** HAI RAGGIUNTO IL LIVELLO %level%! ***"
+  xp-gained: "&e+%amount% XP (%reason%)"
+  bossbar-title: "Livello %level% — [%progress%] — %current%/%needed% XP"
+  max-level: "&cHai già raggiunto il livello massimo!"
+
+# Rank messages
+rank:
+  rank-up: "&5&l*** NUOVO RANGO: %rank%! ***"
+  broadcast-rank-up: "&5&l[SERVER] %player% ha raggiunto il rango %rank%!"
+  soft-cap-reached: "&eHai raggiunto il limite del tuo rango attuale. Completa la prova per continuare a salire di livello!"
+  trial-required: "&cDevi completare la prova '%quest%' per superare il limite del tuo rango."
+
+# Stat messages
+stats:
+  points-available: "&eHai %points% punti stat da allocare!"
+  stat-increased: "&a%stat% aumentato a %value%!"
+  stat-maxed: "&cQuesta stat ha raggiunto il valore massimo!"
+  not-enough-points: "&cNon hai abbastanza punti stat!"
+  allocation-committed: "&aAllocazione confermata!"
+  allocation-cancelled: "&cAllocazione annullata."
+
+# Class messages
+class:
+  not-unlocked: "&cLe classi si sbloccano al rango %rank%. Sei ancora troppo debole."
+  already-chosen: "&cHai già scelto la classe %class%. La scelta è permanente!"
+  class-selected: "&a&lHai scelto la classe %class%! %description%"
+  confirmation-required: "&eSei sicuro? La scelta della classe è PERMANENTE. Clicca di nuovo per confermare."
+  info-title: "&6&l%class%"
+  info-bonus: "&eBonus: %bonus%"
+  admin-class-set: "&aClasse di %player% impostata a %class%."
+
+# Quest messages
+quest:
+  accepted: "&aMissione accettata: %quest%"
+  completed: "&6&l*** MISSIONE COMPLETATA: %quest% ***"
+  reward-xp: "&e+ %xp% XP"
+  reward-points: "&e+ %points% Punti Stat"
+  reward-items: "&eOggetti ricevuti!"
+  already-completed: "&cHai già completato questa missione."
+  requirements-not-met: "&cNon soddisfi i requisiti per questa missione."
+  locked-level: "&cBloccato: richiede livello %level%."
+  locked-rank: "&cBloccato: richiede rango %rank%."
+  locked-class: "&cBloccato: richiede la classe %class%."
+  locked-prerequisite: "&cBloccato: completa prima '%quest%'."
+  daily-reset: "&eLe missioni giornaliere sono state resettate!"
+  weekly-reset: "&eLe missioni settimanali sono state resettate!"
+  progress: "&7Progresso: %current%/%target%"
+
+# GUI messages
+gui:
+  status-title: "&9&lStato del Giocatore"
+  quests-title: "&9&lMissioni Disponibili"
+  class-title: "&9&lSelezione Classe"
+  leaderboard-title: "&9&lClassifica Giocatori"
+  confirm-button: "&a&lCONFERMA"
+  cancel-button: "&c&lANNULLA"
+  close-button: "&8Chiudi"
+  tab-daily: "&6Giornaliere"
+  tab-weekly: "&bSettimanali"
+  tab-story: "&5Storia"
+  tab-trial: "&4Prove di Rango"
+  lock-reason: "&cBloccato: %reason%"
+
+# Admin messages
+admin:
+  xp-given: "&aConcessi %amount% XP a %player%."
+  points-given: "&aConcessi %points% punti stat a %player%."
+  level-set: "&aLivello di %player% impostato a %level%."
+  stat-set: "&aStat %stat% di %player% impostata a %value%."
+  stats-reset: "&aStatistiche di %player% resettate."
+
+# PlaceholderAPI placeholders (for reference)
+# %sistema_level% - Player's current level
+# %sistema_rank% - Player's rank display name
+# %sistema_rank_color% - Player's rank color hex
+# %sistema_rank_prefix% - Player's rank prefix with color
+# %sistema_class% - Player's chosen class or "Nessuna"
+# %sistema_xp% - Current XP
+# %sistema_xp_next% - XP needed for next level
+# %sistema_points% - Unspent stat points
+# %sistema_stat_forza% - Strength value
+# %sistema_stat_agilita% - Agility value
+# %sistema_stat_vitalita% - Vitality value
+# %sistema_stat_intelligenza% - Intelligence value
+# %sistema_stat_percezione% - Perception value
+# %sistema_top_<N>_name% - Top N player name
+# %sistema_top_<N>_level% - Top N player level
+# %sistema_top_<N>_rank% - Top N player rank

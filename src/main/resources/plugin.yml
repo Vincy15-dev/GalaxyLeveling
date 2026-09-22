@@ -1,0 +1,43 @@
+name: GalaxyLeveling
+version: '${project.version}'
+main: com.example.plugin.MainClass
+api-version: '1.21'
+description: IL SISTEMA - RPG progression system with custom levels, stats, ranks, classes and quests
+author: Example
+website: https://example.com
+
+softdepend:
+  - PlaceholderAPI
+
+commands:
+  status:
+    description: Opens the Status GUI showing your level, stats and unspent points
+    aliases: [stats]
+    usage: /<command>
+    permission: system.use
+  quests:
+    description: Opens the Quests GUI to view and manage your active quests
+    aliases: [missioni]
+    usage: /<command>
+    permission: system.use
+  classe:
+    description: View class info or open the Class Selection GUI
+    usage: /<command>
+    permission: system.use
+  topsistema:
+    description: Opens the Leaderboard GUI showing top players by level
+    aliases: [toplevel]
+    usage: /<command>
+    permission: system.use
+  system:
+    description: Administrative commands for IL SISTEMA
+    usage: /<command> <reload|give|setlevel|setstat|resetstats|setclass> [args]
+    permission: system.admin
+
+permissions:
+  system.use:
+    description: Allows using basic IL SISTEMA commands
+    default: true
+  system.admin:
+    description: Allows using administrative IL SISTEMA commands
+    default: op
