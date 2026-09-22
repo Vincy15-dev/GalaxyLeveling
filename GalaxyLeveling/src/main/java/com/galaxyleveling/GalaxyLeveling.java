@@ -101,4 +101,8 @@ public class GalaxyLeveling extends JavaPlugin {
     public QuestManager getQuestManager() { return questManager; }
     public QuestProgressService getQuestProgressService() { return questProgressService; }
     public LeaderboardService getLeaderboardService() { return leaderboardService; }
+    
+    public String getMessage(String path) {
+        return getConfig().getString("messages." + path, "&cMessaggio non trovato: " + path);
+    }
 }
